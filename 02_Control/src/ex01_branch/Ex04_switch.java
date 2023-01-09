@@ -86,7 +86,7 @@ public class Ex04_switch {
 		
 		int month = 10; // 1분기: 1~3  2분기: 4~6 3분기: 7~9  4분기: 10~12
 		
-		System.out.println((month - 1) / 3 + 1 + "분기");
+		System.out.println((month - 1) / 3 + 1 + "분기"); // switch문 없이 표현 훨씬 간단!!!11
 		
 		switch((month - 1) / 3) {
 		case 0 : 
