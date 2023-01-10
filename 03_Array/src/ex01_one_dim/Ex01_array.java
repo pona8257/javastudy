@@ -75,7 +75,7 @@ public class Ex01_array {
 		}
 	}
 	
-	public static void ex04() { // 최종적으로 이 버전 사용
+	public static void ex04() { // 최종적으로 이 버전 사용!!!
 		
 		// 배열 선언 + 생성
 		int [] arr = new int[5];

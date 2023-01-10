@@ -1,6 +1,6 @@
 package ex01_one_dim;
 
-public class Ex02_reference {
+public class Ex02_reference {  // 공부 요함
 
 	public static void ex01() {
 		
@@ -22,6 +22,29 @@ public class Ex02_reference {
 		}
 		
 		System.out.println(b[0]);
+	
+		/*
+        |-------|
+      a | 0x123 |─────┐
+        |-------|          │
+        |  ...  |          │
+        |-------|          │
+   a[0] |   0   | 0x123    │
+        |-------|          │
+   a[1] |   0   |          │
+        |-------|          │
+   a[2] |   0   |          │ b = a;   (a와 b가 같아짐)
+        |-------|          │
+   a[3] |   0   |          │
+        |-------|          │
+   a[4] |   0   |          │
+        |-------|          │
+        |  ...  |          │
+        |-------|          │
+      b | 0x123 |◀────┘
+        |-------|
+	*/
+		
 	}
 	
 	public static void ex03() { // 심화
