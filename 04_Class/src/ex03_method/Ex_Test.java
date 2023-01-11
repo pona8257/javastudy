@@ -4,7 +4,7 @@ public class Ex_Test {
 
 	public static void t1() { 
 		
-		int serial = 5;
+		int serial = 7;
 		
 		if(serial % 2 == 0) {
 			System.out.println("여자입니다");
@@ -20,9 +20,9 @@ public class Ex_Test {
 		
 		for(int i = 1; i < 6; i++) {
 			for(int j = 1; j < 6; j++) {
-				System.out.print(" " + i + "x" + j + " = " + i * j);
+				System.out.println(" " + i + "x" + j + " = " + i * j);
 			}
-			System.out.println();
+			//System.out.println();
 		}
 		
 	}
@@ -42,7 +42,7 @@ public class Ex_Test {
 			}
 		}
 		System.out.println("짝수의 합은 : " + eventotal);
-		System.out.println("홀수의 합은 ; " + oddtotal);
+		System.out.println("홀수의 합은 : " + oddtotal);
 		
 		
 	}
