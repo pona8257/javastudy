@@ -118,7 +118,7 @@ public class Ex01_String {
 		
 		// substring 사용법
 		// 1. substring(int beagin) : 인덱스 begin부터 끝까지 반환
-		// 2. substring(int begin, int end) : 인덱스 begin부터 end "이전"까지 반환(begin <= 
+		// 2. substring(int begin, int end) : 인덱스 begin부터 end "이전"까지 반환(begin <= 추출범위 < end)
 		
 		String name = "한재형";
 		
@@ -339,6 +339,6 @@ public class Ex01_String {
 	}
 	
 	public static void main(String[] args) {
-		format();
+		indexOf();
 	}
 }
