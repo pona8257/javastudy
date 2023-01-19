@@ -1,5 +1,6 @@
 package ex01_try_catch;
 
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class MainClass {
@@ -16,7 +17,7 @@ public class MainClass {
 			season[1] = "summer";
 			season[2] = "autumn";
 			season[3] = "winter";
-			season[4] = "what";
+			season[4] = "what";		// 예외가 발생함 
 	
 			for(String str : season) {
 				System.out.println(str.substring(0, 3));
@@ -30,7 +31,7 @@ public class MainClass {
 		
 		try {
 		
-		String input = "1,2,3,4,5";
+		String input = "1,2,3,,4,5";
 		String[] numbers = input.split(",");
 		int[] iNumbers = new int[numbers.length];
 		
@@ -41,7 +42,7 @@ public class MainClass {
 		 } 
 		
 	  } catch(NumberFormatException e) {	//UnChecked Exception이므로 RuntimeException 가능
-		  System.out.println("NumberFormatException 발생");
+		  System.out.println("NumberFormatException 발생");	// 중간에 공백이 있어서 정수로 변환 불가
 	  }
 	}
 	
@@ -66,8 +67,21 @@ public class MainClass {
 		
 	}
 	
+	public static void ex04() {
+		
+		try {
+			FileReader fr = new FileReader("sample.txt"); 	// 옆에 Unhandled Exception뜨면 try-catch 사용한다
+			fr.close();
+		    // 위 처럼 try - catch문이 필요한것이 Checked Exception 이다.
+		} catch(Exception e) {
+			System.out.println("예외 발생");
+		}
+		
+		
+	}
+	
 	public static void main(String[] args) {
-		ex03();
+		ex01();
 	}
 
 }

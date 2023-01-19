@@ -12,10 +12,46 @@ public class MainClass {
 	// Hint : 가위는 0, 바위는 1, 보는 2로 처리한다.
 	public static void ex01() {
 		Scanner sc = new Scanner(System.in);
-		int com = ((int)(Math.random() * 3) + 1);
+		int comNum = ((int)(Math.random() * 3) );
+		
+		System.out.println("가위 바위 보 중 하나 >>>>>> ");
 		String hum = sc.next();
 		
-		switch()
+		if(comNum == 0) {
+			if(hum == "0") {
+				System.out.println("비겼다");
+			}
+			else if(hum == "1") {
+				System.out.println("이겼다");
+			}
+			else {
+				System.out.println("졌다");
+			}
+		}else if(comNum == 1) {
+			if(hum == "0") {
+				System.out.println("이겼다");
+			}
+			else if(hum == "1") {
+				System.out.println("비겼다");
+			}
+			else {
+				System.out.println("졌다");
+			}
+		}else {
+			if(hum == "0") {
+				System.out.println("이겼다");
+			}
+			else if(hum == "1") {
+				System.out.println("졌다");
+			}
+			else {
+				System.out.println("비겼다");
+			}
+		}
+		
+		System.out.println(comNum);
+		
+		
 		
 		
 	}

@@ -6,7 +6,7 @@ public class MainClass {
 
 		// User 객체(Bean) 생성
 		
-		User user = new User();
+		User user = new User();   // 디폴트로 만들었으니
 		
 		// setter를 이용한 필드 값 저장
 		user.setId("admin");
