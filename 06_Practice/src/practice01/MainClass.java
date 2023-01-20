@@ -17,48 +17,47 @@ public class MainClass {
 		System.out.println("가위 바위 보 중 하나 >>>>>> ");
 		String hum = sc.next();
 		
-		if(comNum == 0) {
-			if(hum == "0") {
+		if(hum == "가위") {
+			if(comNum == 0) {
 				System.out.println("비겼다");
-			}
-			else if(hum == "1") {
-				System.out.println("이겼다");
-			}
-			else {
+			} else if(comNum == 1) {
 				System.out.println("졌다");
-			}
-		}else if(comNum == 1) {
-			if(hum == "0") {
+			} else {
 				System.out.println("이겼다");
 			}
-			else if(hum == "1") {
+		} else if(hum == "바위") {
+			if(comNum == 0) {
+				System.out.println("이겼다");
+			} else if(comNum == 1) {
 				System.out.println("비겼다");
-			}
-			else {
+			} else {
 				System.out.println("졌다");
 			}
-		}else {
-			if(hum == "0") {
+		} else {
+			if(comNum == 0) {
+				System.out.println("졌다");
+			} else if(comNum == 1) {
 				System.out.println("이겼다");
-			}
-			else if(hum == "1") {
-				System.out.println("졌다");
-			}
-			else {
+			} else {
 				System.out.println("비겼다");
 			}
 		}
-		
 		System.out.println(comNum);
-		
-		
-		
-		
 	}
 	
 	// 문제2. 친구 3명을 저장할 수 있는 배열을 생성하고 임의의 값으로 초기화하시오.
 	// 새로 사귄 친구의 수를 입력 받아서 기존 친구들이 저장된 배열의 길이를 새로 사귄 친구의 수만큼 늘리시오.
 	public static void ex02() {
+		
+		String[] friends = {"철수", "영희", "맹구"};
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("새로사귄 친구가 몇명 인가요? >>> ");
+		int newFr =  sc.nextInt();
+		
+		String[] newFriends = new String[friends.length + newFr];
+		
+		
 		
 	}
 	
