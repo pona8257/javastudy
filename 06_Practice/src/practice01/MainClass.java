@@ -57,7 +57,7 @@ public class MainClass {
 		
 		String[] newFriends = new String[friends.length + newFr];
 		
-		
+		System.out.println(newFriends.length);
 		
 	}
 	
@@ -89,6 +89,8 @@ public class MainClass {
 	// 사용자로부터 비밀번호를 입력 받아서 "1234"와 같으면 "성공", "1234"가 아니면 다시 비밀번호를 입력 받도록 처리하시오.
 	// 비밀번호 입력은 최대 5번으로 제한하고, 5번의 입력이 모두 틀리면 최종적으로 "실패"를 출력하시오.
 	public static void ex06() {
+		
+		
 		
 	}		
 	
@@ -138,7 +140,7 @@ public class MainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex01();
+		ex02();
 	}
 	
 }

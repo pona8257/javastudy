@@ -34,7 +34,7 @@ public class MainClass {	// 중요!!!
 	
 	public static void ex02() {
 		
-		//ArrayList 초기화
+		// ArrayList 초기화
 		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 		
 		// 리스트 길이
