@@ -16,7 +16,7 @@ public class MainClass {
 		 		3) double : nextDouble()
 		 		4) String  
 		 		 	1) next()     : 공백 포함 불가능
-		 		 	2) nextLine() : 공백 포함 불가능
+		 		 	2) nextLine() : 공백 포함 가능
 		 */
 		
 		/*
