@@ -1,10 +1,13 @@
 package practice;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Reader;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -132,9 +135,7 @@ public class MainClass {
 	// 문제5. 에외가 발생한 경우 예외 메세지와 예외 발생시간을 저장한  C:\storage\log.txt
 	public static void ex05() {
 		
-		
 		try {
-			
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -188,10 +189,43 @@ public class MainClass {
 			
 	 }
  }
+	// 문제6. C:\storage\diary.txt 파일을 C:\storage\diary.txt 파일로 이동하시오
+	public static void ex06()  {
+		
+		
+		
+		try {
+			
+			File fileOri = new File("C:" + File.separator + "storage", "diary.txt");
+			BufferedReader br = null;
+			StringBuilder sb = new StringBuilder();
+			
+			File dir = new File("C:" + File.separator + "storage2");
+			if(dir.exists() == false) {
+				dir.mkdirs();
+			}
+			
+			File file2 = new File(dir, "diary.txt");
+			
+			br = new BufferedReader(new FileReader(fileOri));
+			
+			String line = null;
+			while((line = br.readLine()) != null) {
+				sb.append(line);
+			}
+			System.out.println();
+		}catch (IOException e) {
+			e.printStackTrace();
+		} 
+		
+		
+		
+		
+	}
 	
 	public static void main(String[] args) {	// main 메소드 호출하는 곳으로 예외 처리를 넘긴다. (개발자가 try - catch 하지 않겠다) 3
 
-		ex05();
+		ex06();
 		
 	}
 
