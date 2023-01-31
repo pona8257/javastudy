@@ -124,8 +124,8 @@ public class MainClass {
 			while((line = br.readLine()) != null) {
 				sb.append(line);
 			}
-			
 			System.out.println(sb.toString());
+			
 			
 		} catch(IOException e) {
 			e.printStackTrace();
@@ -144,7 +144,7 @@ public class MainClass {
 	
 	
 	public static void main(String[] args) {
-		ex01();
+		ex03();
 	}
 
 }
