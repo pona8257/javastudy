@@ -117,7 +117,7 @@ public class MainClass {
 		
 		try {
 			
-			url = new URL(apiURL);
+			url = new URL("https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png");	// URL은 API주소 불러리려고
 			con = (HttpURLConnection)url.openConnection();	// 통로
 			
 			int responseCode = con.getResponseCode();
@@ -262,7 +262,7 @@ public class MainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex06();
+		ex01();
 	}
 
 }

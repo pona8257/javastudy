@@ -78,10 +78,11 @@ public class MainClass {
 		
 		File dir = new File("C:" + File.separator + "Program Files" + File.separator + "Java" + File.separator + "jdk-11.0.17");
 		File[] files = dir.listFiles();
+		
 		String directory = "";
 		int n = 0;
 		long totalFileSize = 0;
-		
+		System.out.println();
 		for(int i = 0; i < files.length; i++) {
 			if(files[i].isDirectory() == true) {
 				
@@ -322,7 +323,7 @@ public class MainClass {
 	
 	public static void main(String[] args) {	// main 메소드 호출하는 곳으로 예외 처리를 넘긴다. (개발자가 try - catch 하지 않겠다) 3
 
-		ex08();
+		ex04();
 		
 	}
 

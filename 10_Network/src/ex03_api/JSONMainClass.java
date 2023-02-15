@@ -86,14 +86,21 @@ public class JSONMainClass {
 	}
 	
 	public static void ex02() {
-		
-		String serviceKey = "l/CL7ud+rPyAXX5leg3cZ041yAVSwuBnYAh1DQeZVT7uShqVoQrj+aCEQTOuy01ujpEYcXDKepCQdE2IlFvWUw==";
-		String apiURL = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustWeekFrcstDspth";
 
+		/*
+			한국환경공단_에어코리아_대기오염정보 : 시도별 실시간 측정정보 조회
+			1. 서비스 URL : http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustWeekFrcstDspth
+			2. 요청 변수(Request Parameter)
+				1) serviceKey : 인증키
+				2) returnType : xml 또는 json
+				3) searchDate : 통보시간 검색
+		*/
+		
+		String serviceKey = "bEQBRPHjt0tZrc7EsL0T8usfsZ1+wT+5jqamBef/ErC/5ZO6N7nYdRmrwR91bh5d3I1AQeY5qdbJOF6Kv0U1CQ==";
+		String apiURL = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustWeekFrcstDspth";
 		URL url = null;
 		HttpURLConnection con = null;
 		BufferedReader reader = null;
-		BufferedWriter writer = null;
 		
 		try {
 			
@@ -120,28 +127,28 @@ public class JSONMainClass {
 			while((line = reader.readLine()) != null) {
 				sb.append(line);
 			}
+			
 			reader.close();
 			con.disconnect();
 			
 			System.out.println(sb.toString());
 			
-			
-			JSONArray items = new JSONObject(sb.toString()).getJSONObject("response").getJSONObject("body").getJSONArray("items");
-			
+			JSONArray items = new JSONObject(sb.toString())
+								.getJSONObject("response")
+								.getJSONObject("body")
+								.getJSONArray("items");
 			for(int i = 0; i < items.length(); i++) {
 				JSONObject item = items.getJSONObject(i);
-				System.out.println(item.getString("frcstOneDt") + ":" + item.getString("frcstOneCn"));
-				System.out.println(item.getString("frcstTwoDt") + ":" + item.getString("frcstTwoCn"));
-				System.out.println(item.getString("frcstThreeDt") + ":" + item.getString("frcstThreeCn"));
-				System.out.println(item.getString("frcstFourDt") + ":" + item.getString("frcstFourCn"));
+				System.out.println(item.getString("frcstOneDt") + " : " + item.getString("frcstOneCn"));
+		
+				System.out.println(item.getString("frcstTwoDt") + " : " + item.getString("frcstTwoCn"));
+				System.out.println(item.getString("frcstThreeDt") + " : " + item.getString("frcstThreeCn"));
+				System.out.println(item.getString("frcstFourDt") + " : " + item.getString("frcstFourCn"));
 			}
-					
-			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		
 	}
 	

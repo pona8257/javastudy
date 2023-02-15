@@ -118,7 +118,7 @@ public class JSONMainClass {
 		
 		// 1. 일반 for문
 		for(int i = 0; i < products.length(); i++) {
-			JSONObject obj = products.getJSONObject(i);
+			JSONObject obj = products.getJSONObject(i);	// obj[i]의 객체 생성
 			String model = obj.getString("model");
 			String maker = obj.getString("maker");
 			int price = obj.getInt("price");
@@ -172,7 +172,7 @@ public class JSONMainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex05();
+		ex04();
 	}
 
 }

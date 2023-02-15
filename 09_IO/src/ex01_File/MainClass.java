@@ -91,7 +91,7 @@ public class MainClass {
 		File dir = new File("C:" + File.separator + "Program Files");
 		
 		File[] files = dir.listFiles();
-		
+		System.out.println(files);
 		for(int i = 0; i < files.length; i++) {
 			if(files[i].isHidden() == false) {
 				System.out.println(files[i].getName());
@@ -101,7 +101,7 @@ public class MainClass {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		ex01();
+		ex04();
 	}
 
 }
