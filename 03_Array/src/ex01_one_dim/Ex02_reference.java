@@ -67,7 +67,7 @@ public class Ex02_reference {  // 공부 요함
 		
 		// 기존 배열이 신규 배열로 변경되었으므로 확인 (a가 10개로 늘어남)
 		for(int i = 0; i < a.length; i++) {
-			System.out.println(a[i]);
+			System.out.println(b[i]);
 		}
 	}
 	
